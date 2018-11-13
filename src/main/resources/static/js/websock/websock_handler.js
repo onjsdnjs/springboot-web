@@ -1,4 +1,4 @@
-var sock = new SockJS('http://localhost:8080/websock');
+var sock = new SockJS('http://125.141.139.133:8081/websock');
 var client = Stomp.over(sock);
 client.connect({}, function(frame) {
     console.log('connected stomp over sockjs');
