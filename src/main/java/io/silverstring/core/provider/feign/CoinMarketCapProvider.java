@@ -11,7 +11,7 @@ import java.util.List;
 
 
 @Service
-//@FeignClient(name = "coinMarketCapProvider", url = "https://api.coinmarketcap.com", configuration = FeignConfig.class)
+@FeignClient(name = "coinMarketCapProvider", url = "https://api.coinmarketcap.com", configuration = FeignConfig.class)
 public interface CoinMarketCapProvider {
 
     @RequestMapping(method = RequestMethod.GET, value = "/v1/ticker/?convert=KRW&limit=3")
