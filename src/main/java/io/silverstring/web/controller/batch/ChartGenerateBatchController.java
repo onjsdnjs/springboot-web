@@ -29,7 +29,7 @@ public class ChartGenerateBatchController {
         this.redissonClient = redissonClient;
     }
 
-    @Scheduled(cron="0 0/1 * * * ?")
+    @Scheduled(cron="0 0/10 * * * ?")
     private synchronized void generateChartData() {
         String key = environment.getActiveProfiles()[0] + "_generateChartData";
         log.info("### generateChartData ready {} ### ", key);

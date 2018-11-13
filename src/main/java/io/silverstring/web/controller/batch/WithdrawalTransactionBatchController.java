@@ -30,7 +30,7 @@ public class WithdrawalTransactionBatchController {
         this.redissonClient = redissonClient;
     }
 
-    @Scheduled(fixedDelay=6000, initialDelay=6000)
+    @Scheduled(fixedDelay=600000, initialDelay=600000)
     private synchronized void doWithdrawalDepositTransaction() {
 
         String key = environment.getActiveProfiles()[0] + "_doWithdrawalDepositTransaction";
