@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name="coupon", schema = "springboot")
+@Table(name="coupon")
 public class Coupon {
 
     @Id

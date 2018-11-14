@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
-@Table(name="support", schema = "springboot")
+@Table(name="support")
 public class Support {
 
     @Id

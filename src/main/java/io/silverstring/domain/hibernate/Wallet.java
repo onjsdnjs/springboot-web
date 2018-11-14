@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Entity
 @Data
 @IdClass(WalletPK.class)
-@Table(name="wallet", schema = "springboot")
+@Table(name="wallet")
 public class Wallet {
 
     @Id

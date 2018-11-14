@@ -12,7 +12,7 @@ import java.util.List;
 @Entity
 @Data
 @IdClass(ChartPK.class)
-@Table(name="chart", schema = "springboot")
+@Table(name="chart")
 public class Chart {
 
     @Id

@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Entity
 @Data
 @IdClass(MarketHistoryOrderPK.class)
-@Table(name="market_history_order", schema = "springboot")
+@Table(name="market_history_order")
 public class MarketHistoryOrder implements Serializable {
 
     @Id

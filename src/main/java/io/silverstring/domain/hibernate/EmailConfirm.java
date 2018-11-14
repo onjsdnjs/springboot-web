@@ -15,7 +15,7 @@ import lombok.Data;
 @Data
 @Entity
 @IdClass(EmailConfirmPK.class)
-@Table(name="email.confirm", schema = "springboot")
+@Table(name="email.confirm")
 public class EmailConfirm {
 
     @Id

@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name="virtual_account", schema = "springboot")
+@Table(name="virtual_account")
 public class VirtualAccount {
 
     @Id

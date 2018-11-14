@@ -11,7 +11,7 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name="coin", schema = "springboot")
+@Table(name="coin")
 public class Coin {
 
     @Id

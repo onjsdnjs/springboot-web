@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name="submit_document", schema = "springboot")
+@Table(name="submit_document")
 public class SubmitDocument {
 
     @Id

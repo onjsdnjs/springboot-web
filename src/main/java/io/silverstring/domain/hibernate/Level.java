@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 @Data
 @Entity
 @IdClass(LevelPK.class)
-@Table(name="level", schema = "springboot")
+@Table(name="level")
 public class Level {
 
     @Id
