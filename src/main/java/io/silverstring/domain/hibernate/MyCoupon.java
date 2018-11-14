@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 @Data
 @Entity
 @IdClass(MyCouponPK.class)
-@Table(name="my_coupon", schema = "kcampus")
+@Table(name="my_coupon", schema = "springboot")
 public class MyCoupon {
 
     @Id

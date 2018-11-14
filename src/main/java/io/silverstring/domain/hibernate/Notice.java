@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name="notice", schema = "kcampus")
+@Table(name="notice", schema = "springboot")
 public class Notice {
 
     @Id

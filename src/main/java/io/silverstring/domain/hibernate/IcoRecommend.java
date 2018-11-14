@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Data
 @Entity
-@Table(name="ico_recommend", schema = "kcampus")
+@Table(name="ico_recommend", schema = "springboot")
 public class IcoRecommend {
 
     @Id

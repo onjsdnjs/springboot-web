@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name="action_log", schema = "kcampus")
+@Table(name="action_log", schema = "springboot")
 public class ActionLog {
 
     @Id

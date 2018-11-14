@@ -15,7 +15,7 @@ import lombok.Data;
 @Data
 @Entity
 @IdClass(FingerPrintPK.class)
-@Table(name="finger_print", schema = "kcampus")
+@Table(name="finger_print", schema = "springboot")
 public class FingerPrint {
 
     @Id

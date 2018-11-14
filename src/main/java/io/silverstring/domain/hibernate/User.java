@@ -19,7 +19,7 @@ import lombok.Data;
 
 @Data
 @Entity()
-@Table(name="user", schema = "kcampus")
+@Table(name="user", schema = "springboot")
 public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "userGen")

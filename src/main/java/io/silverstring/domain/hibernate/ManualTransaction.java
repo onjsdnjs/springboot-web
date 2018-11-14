@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Data
 @Entity
 @IdClass(ManualTransactionPK.class)
-@Table(name="manuel_transaction", schema = "kcampus")
+@Table(name="manuel_transaction", schema = "springboot")
 public class ManualTransaction {
 
     @Id
