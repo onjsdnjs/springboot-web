@@ -13,7 +13,7 @@ node {
  stage('Unit Test') {
  }
  stage('Build') {
-     sh(script: 'docker-compose build app')
+     sh(script: '/usr/local/bin/docker-compose build app')
  }
  stage('Tag') {
      sh(script: '''docker tag ${DOCKER_USER_ID}/springboot-app \
@@ -25,7 +25,7 @@ node {
      sh(script: 'docker push ${DOCKER_USER_ID}/springboot-app:latest')
  }
  stage('Deploy') {
-     sh(script: 'docker-compose up -d production')
+     sh(script: '/usr/local/bin/docker-compose up -d production')
  }
  }
 }
