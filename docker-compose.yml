@@ -1,0 +1,40 @@
+version: '2'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: springboot-rabbitmq
+#    ports:
+#      - 5672:5672
+#      - 15672:15672
+    environment:
+      - RABBITMQ_DEFAULT_VHOST=/springboot
+  redis:
+    image: redis
+    container_name: springboot-redis
+  db:
+    image: mysql
+    container_name: springboot-mysql
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_DATABASE=springboot
+      - MYSQL_USER=springboot
+      - MYSQL_PASSWORD=springboot
+  app:
+    build: .
+    image: ${DOCKER_USER_ID}/springboot-app
+  production:
+    image: ${DOCKER_USER_ID}/springboot-app:${BUILD_NUMBER}
+    container_name: springboot-app
+    ports:
+      - '8081:8081'
+    links:
+      - db
+      - rabbitmq
+      - redis
+    depends_on:
+      - db
+      - rabbitmq
+      - redis
+    environment:
+      - "SPRING_PROFILES_ACTIVE=docker"
