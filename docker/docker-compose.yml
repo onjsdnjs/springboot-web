@@ -18,8 +18,8 @@ services:
     environment:
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
       - MYSQL_DATABASE=springboot
-      - MYSQL_USER=onjsdnjs
-      - MYSQL_PASSWORD=sust1616
+      - MYSQL_USER=springboot
+      - MYSQL_PASSWORD=springboot
   app:
     build: .
     image: ${DOCKER_USER_ID}/springboot-app
@@ -27,7 +27,7 @@ services:
     image: ${DOCKER_USER_ID}/springboot-app:${BUILD_NUMBER}
     container_name: springboot-app
     ports:
-      - '9090:9090'
+      - '8081:8081'
     links:
       - db
       - rabbitmq
