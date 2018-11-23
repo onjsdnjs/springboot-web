@@ -3,28 +3,31 @@ version: '2'
 services:
   rabbitmq:
     image: rabbitmq:3-management
-    container_name: silverstring-rabbitmq
+    container_name: springboot-rabbitmq
 #    ports:
 #      - 5672:5672
 #      - 15672:15672
     environment:
-      - RABBITMQ_DEFAULT_VHOST=/silverstring
+      - RABBITMQ_DEFAULT_VHOST=/springboot
   redis:
     image: redis
-    container_name: silverstring-redis
+    container_name: springboot-redis
   db:
     image: mysql
-    container_name: silverstring-mysql
+    container_name: springboot-mysql
     environment:
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
       - MYSQL_DATABASE=springboot
       - MYSQL_USER=onjsdnjs
       - MYSQL_PASSWORD=sust1616
-  web:
-    image: com.silverstring/silverstring-web:1.0-SNAPSHOT
-    container_name: silverstring-web
+  app:
+    build: .
+    image: ${DOCKER_USER_ID}/springboot-app
+  production:
+    image: ${DOCKER_USER_ID}/springboot-app:${BUILD_NUMBER}
+    container_name: springboot-app
     ports:
-      - '8080:8080'
+      - '9090:9090'
     links:
       - db
       - rabbitmq
